@@ -220,9 +220,14 @@ body{
 
 
 
-.calculator .buttons .clear{
-    grid-column: span 2;
+.calculator .buttons .AC{
     background-color: #f44336;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+
+.calculator .buttons .DE{
+    background-color: #EBB02D;
     color: #fff;
     border: 2px solid #edf1f4;
 }
@@ -242,14 +247,16 @@ body{
 
 
 
-.calculator .buttons .clear:active,
+.calculator .buttons .AC:active,
+.calculator .buttons .DE:active,
 .calculator .buttons .plus:active,
 .calculator .buttons .equal:active{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff, inset 5px 5px 10px rgba(0, 0, 0, 0.1);
     color: #666;
 }
 
-.dark-theme .calculator .buttons .clear:active,
+.dark-theme .calculator .buttons .AC:active,
+.dark-theme .calculator .buttons .DE:active,
 .dark-theme .calculator .buttons .plus:active,
 .dark-theme .calculator .buttons .equal:active{
     box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -284,7 +291,7 @@ body{
     .dark{
         width: 20px;
         height: 20px;
-        
+
         top: 3px;
         right: 0%;
     }
