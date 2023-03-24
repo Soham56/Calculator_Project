@@ -4,7 +4,7 @@ let value = document.querySelector('.value');
 
 btn.forEach(element => {
     element.addEventListener('click', function (){
-        let sound = new Audio("./music_file_for_project/click-button-140881.mp3");
+        let sound = new Audio("./click-button-140881.mp3");
         setTimeout(function (){
             sound.play();
         }, 100);
