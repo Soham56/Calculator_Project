@@ -12,8 +12,11 @@ btn.forEach(element => {
         if(this.innerHTML=="="){
             value.innerHTML = eval(value.innerHTML);
         }
-        else if (this.innerHTML == "Clear"){
+        else if (this.innerHTML == "AC"){
             value.innerHTML = "";
+        }
+        else if (this.innerHTML == "DE"){
+            value.innerHTML = value.innerHTML.slice(0,-1);
         }
         else{
             value.innerHTML += this.innerHTML;
