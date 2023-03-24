@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+*{
+    margin:  0px;
+    padding:  0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #edf1f4;
+}
+
+.dark-theme{
+    background-color: #282c2f;
+
+}
+
+.dark{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #555;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px #fff;
+    border: 2px solid #edf1f4;
+    overflow: hidden;
+}
+
+.dark-theme .dark{
+    overflow: visible;
+}
+
+
+
+.layout-1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #edf1f4;
+    border-radius: 50%;
+}
+
+
+.dark-theme .layout-1{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: gold;
+    border-radius: 0%;
+}
+
+.dark-theme .layout-2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+    background-color: gold;
+}
+
+
+.dark-theme .layout-3{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: inherit;
+    border: 2px solid #555;
+}
+
+
+
+.swing-animation{
+    animation-name: half-moon;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+.full-sun-animation{
+    animation-name: full-sun;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+
+@keyframes half-moon {
+    0%{
+        transform: translate(30%, 30%);
+    }
+
+    100%{
+        transform: translate(50%, 0%);
+    }
+
+
+}
+
+@keyframes full-sun{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+
+.dark-theme .dark{
+    background-color: #edf1f4;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25), -5px -5px 10px rgba(255, 255, 255, 0.25);
+}
+
+.calculator{
+
+    width: 26%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: -15px -15px 20px #fffb,15px 15px 20px rgba(0, 0, 0, 0.1);
+
+}
+
+.dark-theme .calculator{
+    background: #33393e;
+    box-shadow: -15px -15px 20px rgba(255, 255, 255, 0.1),15px 15px 20px rgba(0, 0, 0, 0.25);
+}
+
+.calculator .buttons{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(7,1fr);
+    gap: 15px;
+}
+
+.calculator .buttons .value{
+    grid-column: span 4;
+    grid-row: span 2;
+
+    user-select: none;
+
+    width: 100%;
+    height: 100%;
+
+    text-align: end;
+    line-height: 300%;
+    overflow: auto;
+    
+
+    color: #5166d6;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 20px #fff;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    padding: 0 10px;
+    font-size: 2em;
+    font-weight: 500;
+   
+}
+
+.dark-theme .calculator .buttons .value{
+    color: #eee;
+    box-shadow: inset -15px -15px 20px rgba(255, 255, 255, 0.1),inset 15px 15px 20px rgba(0, 0, 0, 0.5);
+    
+}
+
+
+
+.value::-webkit-scrollbar{
+    height: 4px;
+}
+
+.value::-webkit-scrollbar-thumb{
+    background-color: #d1cdcd84;
+    border-radius: 10px;
+}
+
+
+
+.calculator .buttons span{
+    padding:  10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    color: #666;
+    border: 2px solid #edf1f4;
+    border-radius: 10px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.dark-theme .calculator .buttons span{
+    color: #eee;
+    border: 2px solid #333;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25),-5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+
+
+
+.calculator .buttons span:active{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px #fff;
+    color: #f44336;
+}
+
+.dark-theme .calculator .buttons span:active{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25), inset -5px -5px 10px rgba(255, 255, 255, 0.1);;
+}
+
+
+
+.calculator .buttons .clear{
+    grid-column: span 2;
+    background-color: #f44336;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+
+.calculator .buttons .plus{
+    grid-row: span 2;
+    background-color: #31a935;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+
+.calculator .buttons .equal{
+    background-color: #2196f3;
+    color: #fff;
+    border: 2px solid #edf1f4;
+}
+
+
+
+.calculator .buttons .clear:active,
+.calculator .buttons .plus:active,
+.calculator .buttons .equal:active{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px #fff, inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+    color: #666;
+}
+
+.dark-theme .calculator .buttons .clear:active,
+.dark-theme .calculator .buttons .plus:active,
+.dark-theme .calculator .buttons .equal:active{
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+@media screen and (max-width: 909px) {
+   .calculator{
+    width: 35%;
+   } 
+}
+
+@media screen and (max-width: 430px) {
+    .calculator{
+        width: 75%;
+    }
+
+    .dark{
+        width: 25px;
+        height: 25px;
+    }
+
+}
+
+@media screen and (max-width: 321px) {
+    .calculator{
+        width: 100%;
+    }
+
+    .dark{
+        width: 20px;
+        height: 20px;
+        
+        top: 3px;
+        right: 0%;
+    }
+}
+
